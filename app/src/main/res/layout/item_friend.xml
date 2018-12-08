@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_marginRight="16dp"
+        android:id="@+id/frienditem_imageview"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_account" />
+
+    <TextView
+        android:id="@+id/frienditem_textview"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="TextView" />
+</LinearLayout>
