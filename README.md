@@ -4,10 +4,30 @@
 배달비와 최소주문 금액이 부담되는 혼밥러들이 모여 
 음식을 같이 주문하고 나누어 먹을 수 있도록 매칭-채팅 서비스를 제공하는 앱입니다.
 
-<h2>1. 설치 방법 및 사용법</h2>
+<h2>1.사용법</h2>
 디바이스를 연결하여 앱을 실행 후 구글 아이디를 이용하여 로그인 하세요.
 지도에 표시된 채팅방에 들어가 해당 음식점에서 먹고 싶은 메뉴를 정하거나,
 먹고 싶은 음식이 없을 시 새로 채팅방을 만들 수 있습니다.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43066601/50152528-2f04aa00-0307-11e9-8c0c-17ea23f3e3ad.png" width="350"/>
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43066601/50152532-3035d700-0307-11e9-99d0-040d819bd81a.png" width="350"/>
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43066601/50152533-3035d700-0307-11e9-831e-6e2afefd1358.png" width="350"/>
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43066601/50152529-2f04aa00-0307-11e9-8c26-8492f4b61123.png" width="350"/>
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43066601/50152536-30ce6d80-0307-11e9-9251-378b121f69ab.png" width="350"/>
+</p>
+<p align="center">
+ 
+  <img src="https://user-images.githubusercontent.com/43066601/50152531-2f9d4080-0307-11e9-972e-45eebba8d5b2.png" width="350"/>
+</p>
+
 <h2>2. 주요 기능 코드/API 설명</h2>
   <h3>2.1 가격을 1/n으로 나눠주는 기능 </h3>
     <h4>2.1.1 총 가격 입력받기</h4>
@@ -17,7 +37,7 @@
   <img src="https://user-images.githubusercontent.com/43066601/50151745-1dba9e00-0305-11e9-9cc9-fbe6ca09aba6.PNG" width="350"/>
 </p>
                                                                                                                          
-                                                                                                                                 `````java
+ ````java                                                                                                                                
      @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -36,7 +56,7 @@
                 break;
         }
        }
- `````
+ ````
     
  MessageSettingDialog.java의 onClick 함수에서에서 구현합니다. 사용자가 채팅방 정보를 입력하고 설정 을 누르면 (dialog_setting_ok 인 경우), SettingModel의 객체를 생성합니다. SettingModel.java는 채팅방의 정보를 저장하는 클래스입니다. 
        SettingModel 의 생성자는 
