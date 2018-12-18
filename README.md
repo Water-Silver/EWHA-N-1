@@ -11,13 +11,13 @@
 <h2>2. 주요 기능 코드/API 설명</h2>
   <h3>2.1 가격을 1/n으로 나눠주는 기능 </h3>
     <h4>2.1.1 총 가격 입력받기</h4>
-![img1](https://user-images.githubusercontent.com/43066601/50151347-fe6f4100-0303-11e9-9731-f22ffa730462.PNG)
-<p align="center">
-  <https://user-images.githubusercontent.com/43066601/50151347-fe6f4100-0303-11e9-9731-f22ffa730462.PNG" width="350"/>
-  <img src="https://user-images.githubusercontent.com/43066601/50151347-fe6f4100-0303-11e9-9731-f22ffa730462.PNG" width="350"/>
-</p>
 
-     ```java
+<p align="center">
+  <"https://user-images.githubusercontent.com/43066601/50151745-1dba9e00-0305-11e9-9cc9-fbe6ca09aba6.PNG" width="350"/>
+  <img src="https://user-images.githubusercontent.com/43066601/50151745-1dba9e00-0305-11e9-9cc9-fbe6ca09aba6.PNG" width="350"/>
+</p>
+                                                                                                                         
+                                                                                                                                 `````java
      @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -72,10 +72,16 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
  채팅방 정보를 저장할 때 Firebase 실시간 데이터베이스를 이용합니다. 데이터베이스에서 데이터를 읽고 쓰려면 DabaseReference의 인스턴스가 필요합니다
  여기서 settingRef가 Setting의 하위 노드를 가리키고 있습니다. Setting이 채팅방 정보입니다
  
- 파이어베이스 이미지 삽입
+ <p align="center">
+  <"https://user-images.githubusercontent.com/43066601/50151748-1eebcb00-0305-11e9-99dd-e703b8b17baf.PNG" width="350"/>
+  <img src="https://user-images.githubusercontent.com/43066601/50151748-1eebcb00-0305-11e9-99dd-e703b8b17baf.PNG" width="350"/>
+</p>
  <Firebase 실시간 데이터베이스>
  
- 채팅방 메뉴 이미지 삽입
+  <p align="center">
+  <"https://user-images.githubusercontent.com/43066601/50151863-7ab65400-0305-11e9-926a-0fe220259295.PNG" width="350"/>
+  <img src="https://user-images.githubusercontent.com/43066601/50151863-7ab65400-0305-11e9-926a-0fe220259295.PNG" width="350"/>
+</p>
  <채팅방 정보>
  
  
@@ -105,7 +111,10 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
         
 info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
         
-최종 이미지
+ <p align="center">
+  <"https://user-images.githubusercontent.com/43066601/50151867-7c801780-0305-11e9-8e4e-f52d3366b93d.PNG" width="350"/>
+  <img src="https://user-images.githubusercontent.com/43066601/50151867-7c801780-0305-11e9-8e4e-f52d3366b93d.PNG" width="350"/>
+</p>
     
  <h3>2.2 지도에 채팅방을 나타내는 마커 표시하기    </h3> 
  <h4>2.2.1 daum 지도 API </h4>
