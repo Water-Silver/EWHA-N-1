@@ -11,6 +11,31 @@
 <h2>2. 주요 기능 코드/API 설명<h2>
   <h3>2.1 가격을 1/n으로 나눠주는 기능 <h3>
     <h4>2.1.1 총 가격 입력받기
+      --총가격 이미지 삽입---
+     
+      ```java
+      @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.dialog_setting_cancel:
+                dialogListener.onNegativeClicked();
+                break;
+
+            case R.id.dialog_setting_ok:
+                SettingModel setting = new SettingModel(
+                    menu.getText().toString().trim(),
+                    Integer.parseInt(price.getText().toString().trim()),
+                    place.getText().toString().trim(),                            
+                    hour+"시 "+minute+"분"
+                );
+                dialogListener.onPositiveClicked(setting);
+                break;
+        }
+    }
+    ```
+
+       MessageSettingDialog.java에서 price.getText()로 사용자가 입력한 가격을 받아옵니다. 이 가격으로 채팅방 정보를 setting 하는 클래스인 SettingModel.java의 필드 price를 초기화합니다.
+      
   
 
 <h2>개발자 정보</h2>
