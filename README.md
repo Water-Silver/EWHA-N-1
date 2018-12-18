@@ -47,9 +47,11 @@
       
   <h4>2.1.2 채팅방 인원수 구하기</h4>
   ChatRoom.java은 현재 채팅방을 나타내는 클래스 입니다.
-    ```java
-       public Map<String, Boolean> users = new HashMap<>();
-       ```
+   
+   
+       `public Map<String, Boolean> users = new HashMap<>();`
+       
+       
   ChatRoom.java에서 현재 채팅방에 있는 사용자를 HashMap 형태로 나타냅니다.
   
        ```java
