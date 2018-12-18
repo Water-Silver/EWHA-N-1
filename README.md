@@ -6,8 +6,16 @@
 
 <h2>1.사용법</h2>
 디바이스를 연결하여 앱을 실행 후 구글 아이디를 이용하여 로그인 하세요.
-지도에 표시된 채팅방에 들어가 해당 음식점에서 먹고 싶은 메뉴를 정하거나,
-먹고 싶은 음식이 없을 시 새로 채팅방을 만들 수 있습니다.
+지도를 클릭하면 그 위치에 새로운 채팅방을 만들 수 있습니다.
+지도에 있는 마커를 누르면 만들어져 있는 채팅방에 들어갈 수 있습니다.
+노란색 마커는 이미 인원수가 다 차서 못 들어가는 채팅방을 의미합니다.
+지도 위에 메뉴를 누르면 보고 싶은 음식점 종류만 선택해서 볼 수 있습니다.
+채팅방 우측에 메뉴를 클릭하고 메뉴를 설정 할 수 있습니다.
+음식, 가격, 만나는 장소 , 시간을 정하고 확인을 하면 
+메뉴창에 채팅방 정보가 뜹니다.
+1인당 얼마나 돈을 내야 하는지 계산도 해줍니다.
+
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/43066601/50152528-2f04aa00-0307-11e9-8c0c-17ea23f3e3ad.png" width="350"/>
 </p>
@@ -70,7 +78,7 @@ public SettingModel(String menu, int price, String place, String time)
 ````
      
        
- 입니다. price.getText()으로 사용자가 입력한 가격을 받아오고, 생성자를 이용해서 이를 SettingModel.java의 price 필드에 저장합니다.
+ 입니다. `price.getText()`으로 사용자가 입력한 가격을 받아오고, 생성자를 이용해서 이를 SettingModel.java의 price 필드에 저장합니다.
   
    
       
@@ -97,7 +105,7 @@ DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child(
 DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().child("Setting");
 ````
 
- 채팅방 정보를 저장할 때 Firebase 실시간 데이터베이스를 이용합니다. 데이터베이스에서 데이터를 읽고 쓰려면 DabaseReference의 인스턴스가 필요합니다
+ 채팅방 정보를 저장할 때 Firebase 실시간 데이터베이스를 이용합니다. 데이터베이스에서 데이터를 읽고 쓰려면 `DabaseReference`의 인스턴스가 필요합니다
  여기서 settingRef가 Setting의 하위 노드를 가리키고 있습니다. Setting이 채팅방 정보입니다
  
  <p align="center">
@@ -131,7 +139,7 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
 ````  
 
  ValueEventListener는 데이터베이스에서 일어나는 모든 변화를 감지합니다.            
- onDataChange() 메소드를 사용하여 이벤트 발생 시점을 기준으로 지정된 경로에 있는 내용의 정적 스냅샷을 읽을 수 있습니다. 이 메소드는 리스너가 연결될 때 한 번 호출된 후 하위를 포함한 데이터가 변경될 때마다 다시 호출됩니다. 이 함수를 이용해서 데이터가 변경될 때, item.getValue(SettingModel.class)로 SettingModel의 데이터를 가져옵니다.
+ `onDataChange()` 메소드를 사용하여 이벤트 발생 시점을 기준으로 지정된 경로에 있는 내용의 정적 스냅샷을 읽을 수 있습니다. 이 메소드는 리스너가 연결될 때 한 번 호출된 후 하위를 포함한 데이터가 변경될 때마다 다시 호출됩니다. 이 함수를 이용해서 데이터가 변경될 때, `item.getValue(SettingModel.class)`로 SettingModel의 데이터를 가져옵니다.
  (1인분 가격)=(총 가격)/(채팅방 인원수)으로 1인당 가격을 구하고 info_price에 저장합니다.
              
 ````java            
