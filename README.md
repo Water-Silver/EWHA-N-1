@@ -11,8 +11,9 @@
 <h2>2. 주요 기능 코드/API 설명</h2>
   <h3>2.1 가격을 1/n으로 나눠주는 기능 </h3>
     <h4>2.1.1 총 가격 입력받기</h4>
-      총가격 이미지 삽입
-     
+![img1](https://user-images.githubusercontent.com/43066601/50151347-fe6f4100-0303-11e9-9731-f22ffa730462.PNG)
+
+
      ```java
      @Override
     public void onClick(View v) {
