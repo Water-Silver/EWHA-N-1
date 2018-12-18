@@ -216,13 +216,15 @@ setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커�
 <li>
   윤하은(Water-Silver): <ul><li>파이어베이스 - 구글 로그인, 채팅방 데이터베이스 연동</li>
   <li>구글 아이디를 이용하여 사용자를 식별하는 기능</li>
-  <li>지도의 위치 정보를 받아와 채팅방 생성시 채팅방 이름과 위치 등의 정보를 저장 및 불러오기</li></ul>
+  <li>지도의 위치 정보를 받아와 채팅방 생성시 채팅방 이름과 위치(위경도) 등의 정보를 저장 및 불러오기</li>
+  <li>시연 영상 </li></ul>
 </li>
 <li>
   서현주(seohsj): <ul><li>ppt 및 발표</li>
   <li>중간 ppt</li>
   <li>중간 발표</li>
   <li>코드 분석 및 readme 파일 관리</li>
+  <li>알파 테스트</li>
   <li>최종 발표</li>
   </ul>
 </li>
@@ -230,6 +232,7 @@ setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커�
   최윤영(ILoveSpongebob) : <ul><li>ppt 및 발표</li>
   <li>중간 ppt(사전조사 부분)</li>
   <li>코드 분석</li>
+  <li>알파 테스트</li>
   <li>최종 ppt 제작 및 발표</li>
   </ul>
 </li>
