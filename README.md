@@ -13,7 +13,7 @@
     <h4>2.1.1 총 가격 입력받기</h4>
       총가격 이미지 삽입
      
-     ```java
+     ```javascript
       @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -37,9 +37,9 @@
  MessageSettingDialog.java의 onClick 함수에서에서 구현합니다. 사용자가 채팅방 정보를 입력하고 설정 을 누르면 (dialog_setting_ok 인 경우), SettingModel의 객체를 생성합니다. SettingModel.java는 채팅방의 정보를 저장하는 클래스입니다. 
        SettingModel 의 생성자는 
        
-     ```java
-       public SettingModel(String menu, int price, String place, String time)
-     ```   
+     
+       `public SettingModel(String menu, int price, String place, String time)`
+     
        
  입니다. price.getText()으로 사용자가 입력한 가격을 받아오고, 생성자를 이용해서 이를 SettingModel.java의 price 필드에 저장합니다.
   
