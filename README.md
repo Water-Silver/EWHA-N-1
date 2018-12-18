@@ -32,7 +32,7 @@
 </li>
 <li>
   서현주(seohsj): <ul><li>데이터베이스</li>
-  <li>메뉴판 데이터베이스 만들기</li>
+  <li>메뉴판 데이터베이스 만들기</li></ul>
 </li>
 <li>
   최윤영(ILoveSpongebob) : <ul><li>채팅방안의 데이터베이스 </li>
