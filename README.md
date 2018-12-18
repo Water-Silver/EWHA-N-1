@@ -62,10 +62,12 @@
  ````
     
  MessageSettingDialog.java의 onClick 함수에서에서 구현합니다. 사용자가 채팅방 정보를 입력하고 설정 을 누르면 (dialog_setting_ok 인 경우), SettingModel의 객체를 생성합니다. SettingModel.java는 채팅방의 정보를 저장하는 클래스입니다. 
-       SettingModel 의 생성자는 
+SettingModel 의 생성자는 
        
      
-       `public SettingModel(String menu, int price, String place, String time)`
+````java
+public SettingModel(String menu, int price, String place, String time)
+````
      
        
  입니다. price.getText()으로 사용자가 입력한 가격을 받아오고, 생성자를 이용해서 이를 SettingModel.java의 price 필드에 저장합니다.
@@ -76,22 +78,25 @@
   ChatRoom.java은 현재 채팅방을 나타내는 클래스 입니다.
    
    
-       `public Map<String, Boolean> users = new HashMap<>();`
-       
+````java
+public Map<String, Boolean> users = new HashMap<>();
+````       
        
   ChatRoom.java에서 현재 채팅방에 있는 사용자를 HashMap 형태로 나타냅니다.
   
-       ```java
+````java
        ChatRoom current_chatroom;
        current_chatroom.users.size()    //채팅방 인원수
-       ```
- 
+````
+
 <h4>2.1.3 1인당 가격 계산하기</h4>
-```java
+
+````java
 DatabaseReference chatroomRef = FirebaseDatabase.getInstance().getReference().child("chatroom");
 DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users");
 DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().child("Setting");
-```
+````
+
  채팅방 정보를 저장할 때 Firebase 실시간 데이터베이스를 이용합니다. 데이터베이스에서 데이터를 읽고 쓰려면 DabaseReference의 인스턴스가 필요합니다
  여기서 settingRef가 Setting의 하위 노드를 가리키고 있습니다. Setting이 채팅방 정보입니다
  
@@ -109,7 +114,7 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
  
  
  
-        ```java
+````java
     settingRef.orderByKey().equalTo(key).addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -123,14 +128,15 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
             Toast.makeText(MessageActivity.this, "메뉴가 설정되었습니다. 채팅방 정보를 확인하세요.", Toast.LENGTH_SHORT).show();
         }
     }
-            ```
+````  
+
  ValueEventListener는 데이터베이스에서 일어나는 모든 변화를 감지합니다.            
  onDataChange() 메소드를 사용하여 이벤트 발생 시점을 기준으로 지정된 경로에 있는 내용의 정적 스냅샷을 읽을 수 있습니다. 이 메소드는 리스너가 연결될 때 한 번 호출된 후 하위를 포함한 데이터가 변경될 때마다 다시 호출됩니다. 이 함수를 이용해서 데이터가 변경될 때, item.getValue(SettingModel.class)로 SettingModel의 데이터를 가져옵니다.
  (1인분 가격)=(총 가격)/(채팅방 인원수)으로 1인당 가격을 구하고 info_price에 저장합니다.
              
-             ```java
+````java            
              info_price.setText(setting.price); 
-             ```
+````
         
 info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
         
@@ -141,12 +147,14 @@ info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
     
  <h3>2.2 지도에 채팅방을 나타내는 마커 표시하기    </h3> 
  <h4>2.2.1 daum 지도 API </h4>
- ```java
+ 
+ ````java
  mapView = new MapView(this);
         mapView.setDaumMapApiKey("7f79f8a60fed7aca35c2e2638c658363");
         ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
         mapViewContainer.addView(mapView);
-  ```
+  ````
+  
  MapView 클래스 는 Daum 지도 화면을 보여주는 view class 입니다.
 위 코드를 통해서 mapview를 띄웁니다.
 
@@ -155,14 +163,14 @@ info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
  `private void setMarkerOnMap(ChatRoom chatroom) { }`
 setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커를 표시하는 함수입니다.
 
-          ```java
+ ````java
           double latitude = chatroom.latitude;       //위도 
           double longitude = chatroom.longitude;      //경도
           String title = chatroom.title;             //채팅방 제목
-          ```
+ ````
  `    MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(latitude, longitude);` 로 마커를 추가합니다.
  
-```java
+````java
     if (chatroom.status.equals("yet")) {
         marker.setMarkerType(MapPOIItem.MarkerType.BluePin);
         marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
@@ -170,11 +178,16 @@ setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커�
         marker.setMarkerType(MapPOIItem.MarkerType.YellowPin);
         marker.setSelectedMarkerType(MapPOIItem.MarkerType.YellowPin);
     }
- ```
+ ````
+ 
  만약 chatRoom의 인원 수가 꽉 찬 경우라면("full"), 마커가 노란색으로 표시되고 들어갈 채팅방으로 들어갈 수 없습니다.
 인원수가 차지 않은 경우("yet"), 선택하기 전에는 마커가 파란색으로 표시되고, 선택 후에는 빨간색으로 표시됩니다.
 
-`markers.add(marker);` 마커들을 Makers 배열에 저장합니다.
+ ````java
+ markers.add(marker);
+ ````
+ 
+ 마커들을 Makers 배열에 저장합니다.
 `mapView.addPOIItem(marker);`  지도에 마커를 붙입니다.
 
 <h2>개발자 정보</h2>
