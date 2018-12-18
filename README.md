@@ -103,9 +103,20 @@ info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
         
 최종 이미지
     
-    
-<h3>2.2 다음 지도 API  </h3>  
-         `private void setMarkerOnMap(ChatRoom chatroom) { }`
+ <h3>2.2도에 채팅방을 나타내는 마커 표시하기    </h3> 
+ <h4>2.2.1 daum 지도 API </h4>
+ ```java
+ mapView = new MapView(this);
+        mapView.setDaumMapApiKey("7f79f8a60fed7aca35c2e2638c658363");
+        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
+        mapViewContainer.addView(mapView);
+  ```
+ MapView 클래스 는 Daum 지도 화면을 보여주는 view class 입니다.
+위 코드를 통해서 mapview를 띄웁니다.
+
+ 
+<h4>지도에 마커 표시 </h4>
+ `private void setMarkerOnMap(ChatRoom chatroom) { }`
 setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커를 표시하는 함수입니다.
 
           ```java
@@ -113,8 +124,22 @@ setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커�
           double longitude = chatroom.longitude;      //경도
           String title = chatroom.title;             //채팅방 제목
           ```
+ `    MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(latitude, longitude);` 로 마커를 추가합니다.
  
+```java
+    if (chatroom.status.equals("yet")) {
+        marker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+    } else if (chatroom.status.equals("full")) {
+        marker.setMarkerType(MapPOIItem.MarkerType.YellowPin);
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.YellowPin);
+    }
+ ```
+ 만약 chatRoom의 인원 수가 꽉 찬 경우라면("full"), 마커가 노란색으로 표시되고 들어갈 채팅방으로 들어갈 수 없습니다.
+인원수가 차지 않은 경우("yet"), 선택하기 전에는 마커가 파란색으로 표시되고, 선택 후에는 빨간색으로 표시됩니다.
 
+`markers.add(marker);` 마커들을 Makers 배열에 저장합니다.
+`mapView.addPOIItem(marker);`  지도에 마커를 붙입니다.
 
 <h2>개발자 정보</h2>
 <ul>
