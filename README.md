@@ -13,7 +13,7 @@
     <h4>2.1.1 총 가격 입력받기</h4>
 
 <p align="center">
-  <"https://user-images.githubusercontent.com/43066601/50151745-1dba9e00-0305-11e9-9cc9-fbe6ca09aba6.PNG" width="350"/>
+ 
   <img src="https://user-images.githubusercontent.com/43066601/50151745-1dba9e00-0305-11e9-9cc9-fbe6ca09aba6.PNG" width="350"/>
 </p>
                                                                                                                          
@@ -73,7 +73,7 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
  여기서 settingRef가 Setting의 하위 노드를 가리키고 있습니다. Setting이 채팅방 정보입니다
  
  <p align="center">
-  <"https://user-images.githubusercontent.com/43066601/50151748-1eebcb00-0305-11e9-99dd-e703b8b17baf.PNG" width="350"/>
+  
   <img src="https://user-images.githubusercontent.com/43066601/50151748-1eebcb00-0305-11e9-99dd-e703b8b17baf.PNG" width="350"/>
 </p>
  <Firebase 실시간 데이터베이스>
@@ -112,7 +112,7 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
 info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
         
  <p align="center">
-  <"https://user-images.githubusercontent.com/43066601/50151867-7c801780-0305-11e9-8e4e-f52d3366b93d.PNG" width="350"/>
+ 
   <img src="https://user-images.githubusercontent.com/43066601/50151867-7c801780-0305-11e9-8e4e-f52d3366b93d.PNG" width="350"/>
 </p>
     
