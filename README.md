@@ -219,8 +219,12 @@ setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커�
   <li>지도의 위치 정보를 받아와 채팅방 생성시 채팅방 이름과 위치 등의 정보를 저장 및 불러오기</li></ul>
 </li>
 <li>
-  서현주(seohsj): <ul><li>데이터베이스</li>
-  <li>메뉴판 데이터베이스 만들기</li></ul>
+  서현주(seohsj): <ul><li>ppt 및 발표</li>
+  <li>중간 ppt</li>
+  <li>중간 발표</li>
+  <li>코드 분석 및 readme 파일 관리</li>
+  <li>최종 발표</li>
+  </ul>
 </li>
 <li>
   최윤영(ILoveSpongebob) : <ul><li>채팅방안의 데이터베이스 </li>
