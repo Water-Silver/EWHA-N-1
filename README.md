@@ -60,12 +60,11 @@
        ```
  
 <h4>2.1.3 1인당 가격 계산하기</h4>
-
-        ```java
-        DatabaseReference chatroomRef = FirebaseDatabase.getInstance().getReference().child("chatroom");
-        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users");
-        DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().child("Setting");
-        ```
+```java
+DatabaseReference chatroomRef = FirebaseDatabase.getInstance().getReference().child("chatroom");
+DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users");
+DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().child("Setting");
+```
  채팅방 정보를 저장할 때 Firebase 실시간 데이터베이스를 이용합니다. 데이터베이스에서 데이터를 읽고 쓰려면 DabaseReference의 인스턴스가 필요합니다
  여기서 settingRef가 Setting의 하위 노드를 가리키고 있습니다. Setting이 채팅방 정보입니다
  
@@ -106,7 +105,15 @@ info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
     
     
 <h3>2.2 다음 지도 API  </h3>  
+         `private void setMarkerOnMap(ChatRoom chatroom) { }`
+setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커를 표시하는 함수입니다.
 
+          ```java
+          double latitude = chatroom.latitude;       //위도 
+          double longitude = chatroom.longitude;      //경도
+          String title = chatroom.title;             //채팅방 제목
+          ```
+ 
 
 
 <h2>개발자 정보</h2>
