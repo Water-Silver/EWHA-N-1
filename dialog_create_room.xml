@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="start"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="24dp"
+        android:text="채팅방 만들기"
+        android:textColor="#000"
+        android:textSize="20sp"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/dialog_create_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="방 제목"
+            android:inputType="textPersonName"
+            android:textColorHint="#42000000" />
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <LinearLayout
+        android:paddingHorizontal="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/dialog_create_numSpiner"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/dialog_create_menuSpiner"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <TextView
+        android:text="만들 채팅방의 이름, 인원수, 메뉴명을 입력하세요"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/dialog_create_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="취소"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/dialog_create_create"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="생성"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+</LinearLayout>
