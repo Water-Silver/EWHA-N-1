@@ -103,7 +103,7 @@ info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
         
 최종 이미지
     
- <h3>2.2도에 채팅방을 나타내는 마커 표시하기    </h3> 
+ <h3>2.2 지도에 채팅방을 나타내는 마커 표시하기    </h3> 
  <h4>2.2.1 daum 지도 API </h4>
  ```java
  mapView = new MapView(this);
