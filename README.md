@@ -12,7 +12,10 @@
   <h3>2.1 가격을 1/n으로 나눠주는 기능 </h3>
     <h4>2.1.1 총 가격 입력받기</h4>
 ![img1](https://user-images.githubusercontent.com/43066601/50151347-fe6f4100-0303-11e9-9731-f22ffa730462.PNG)
-
+<p align="center">
+  <https://user-images.githubusercontent.com/43066601/50151347-fe6f4100-0303-11e9-9731-f22ffa730462.PNG" width="350"/>
+  <img src="https://user-images.githubusercontent.com/43066601/50151347-fe6f4100-0303-11e9-9731-f22ffa730462.PNG" width="350"/>
+</p>
 
      ```java
      @Override
