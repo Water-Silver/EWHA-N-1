@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- Settings, should always be in the overflow -->
+    <item
+        android:id="@+id/action_menu_all"
+        app:showAsAction="never"
+        android:title="모든 메뉴 보기" />
+
+    <item
+        android:id="@+id/action_menu_chicken"
+        app:showAsAction="never"
+        android:title="치킨만 보기" />
+
+    <item
+        android:id="@+id/action_menu_pizza"
+        app:showAsAction="never"
+        android:title="피자만 보기" />
+
+    <item
+        android:id="@+id/action_menu_chinease"
+        app:showAsAction="never"
+        android:title="중국집만 보기" />
+
+    <item
+        android:id="@+id/action_menu_bento"
+        app:showAsAction="never"
+        android:title="도시락만 보기" />
+
+    <item
+        android:id="@+id/action_menu_fastfood"
+        app:showAsAction="never"
+        android:title="패스트푸드만 보기" />
+
+</menu>
