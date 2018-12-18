@@ -79,7 +79,7 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
  <Firebase 실시간 데이터베이스>
  
   <p align="center">
-  <"https://user-images.githubusercontent.com/43066601/50151863-7ab65400-0305-11e9-926a-0fe220259295.PNG" width="350"/>
+  
   <img src="https://user-images.githubusercontent.com/43066601/50151863-7ab65400-0305-11e9-926a-0fe220259295.PNG" width="350"/>
 </p>
  <채팅방 정보>
