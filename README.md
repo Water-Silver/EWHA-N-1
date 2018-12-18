@@ -36,7 +36,7 @@
                 break;
         }
        }
-      ```
+ `````
     
  MessageSettingDialog.java의 onClick 함수에서에서 구현합니다. 사용자가 채팅방 정보를 입력하고 설정 을 누르면 (dialog_setting_ok 인 경우), SettingModel의 객체를 생성합니다. SettingModel.java는 채팅방의 정보를 저장하는 클래스입니다. 
        SettingModel 의 생성자는 
@@ -76,13 +76,13 @@ DatabaseReference settingRef = FirebaseDatabase.getInstance().getReference().chi
   
   <img src="https://user-images.githubusercontent.com/43066601/50151748-1eebcb00-0305-11e9-99dd-e703b8b17baf.PNG" width="350"/>
 </p>
- <Firebase 실시간 데이터베이스>
+ 
  
   <p align="center">
   
   <img src="https://user-images.githubusercontent.com/43066601/50151863-7ab65400-0305-11e9-926a-0fe220259295.PNG" width="350"/>
 </p>
- <채팅방 정보>
+
  
  
  
