@@ -227,8 +227,11 @@ setMarkerOnMap 함수는 위도와 경도를 받아서 해당 위치에 마커�
   </ul>
 </li>
 <li>
-  최윤영(ILoveSpongebob) : <ul><li>채팅방안의 데이터베이스 </li>
-  <li>채팅방 들어가면 메뉴창에 음식점 버튼 구현</li></ul>
+  최윤영(ILoveSpongebob) : <ul><li>ppt 및 발표</li>
+  <li>중간 ppt(사전조사 부분)</li>
+  <li>코드 분석</li>
+  <li>최종 ppt 제작 및 발표</li>
+  </ul>
 </li>
 </ul>
 <h2>라이센스 정보</h2>
