@@ -13,8 +13,8 @@
     <h4>2.1.1 총 가격 입력받기</h4>
       총가격 이미지 삽입
      
-     ```javascript
-      @Override
+     ```java
+     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.dialog_setting_cancel:
@@ -101,7 +101,10 @@
 info_price를 채팅방 정보에서 TextView로 나타내주면 됩니다
         
 최종 이미지
-     
+    
+    
+<h3>2.2 다음 지도 API  </h3>  
+
 
 
 <h2>개발자 정보</h2>
