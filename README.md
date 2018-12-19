@@ -15,6 +15,8 @@
 메뉴창에 채팅방 정보가 뜹니다.
 1인당 얼마나 돈을 내야 하는지 계산도 해줍니다.
 
+<h2>시연영상</h2>
+https://youtu.be/BLp4tWUQb9M
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/43066601/50152528-2f04aa00-0307-11e9-8c0c-17ea23f3e3ad.png" width="350"/>
